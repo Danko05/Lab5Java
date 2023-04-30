@@ -23,7 +23,7 @@ class MainTest {
                 "Order number is: 3\n\n"
         );
         List<String> actualList = main.shuttleMissions(text);
-        assertEquals(actualList,expectedList);
+        assertEquals(actualList, expectedList);
     }
 
 }
