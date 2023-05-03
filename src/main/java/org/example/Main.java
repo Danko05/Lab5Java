@@ -8,8 +8,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Main {
-    public List<String>  shuttleMissions(String text) {
-        Pattern pattern = Pattern.compile("/shuttle/missions/(\\D{3}-\\d)_(\\d)");
+    public List<String> shuttleMissions(final String text) {
+        Pattern pattern = Pattern.compile(
+                "/shuttle/missions/(\\D{3}-\\d)_(\\d)");
         Matcher matcher = pattern.matcher(text);
         List<String> list = new ArrayList<>();
 
@@ -21,12 +22,13 @@ public class Main {
         System.out.println(list);
         return list;
     }
-    public static void main(String[] args) {
+
+    public void main(final String[] args) {
 
 
         Scanner scanner = new Scanner(System.in);
         String text = scanner.nextLine();
         Main main = new Main();
-        main.shuttleMissions(text) ;
+        main.shuttleMissions(text);
     }
 }
